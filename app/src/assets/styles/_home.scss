@@ -1,0 +1,62 @@
+
+
+.homeContainer_container{
+    // display: flex;
+    // flex-direction: column;
+    // justify-content: center;
+    // align-items: center;
+    .homeHeader_container{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center1;
+        .homeHeader_login{
+            display: flex;
+            justify-content: space-between;
+            padding: 20px 40% 0% 40%;
+            a{
+                text-decoration: none;
+                color: black;
+            }
+        }
+        .homeHeader_logo{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            .home_browser{
+                display: block;
+                margin-left: 10%;
+            }
+            .home_logo{
+                display: flex;
+                justify-content: center;
+                width: 50%;
+                .logo_img{
+                    width: 100%;
+                }
+            }
+            .home_cart{
+                margin-right: 10%;
+            }
+
+        }
+        .homeHeader_menu{
+            display: flex;
+            align-items: center;
+            justify-content: space-around;
+            text-decoration: none;
+            padding-bottom: 20px;
+
+            .navBarLink_li{
+                list-style: none;
+                .navBarLinks_menu_view_icon{
+                    margin-right: 5px;
+                }
+                .link_category{
+                    text-decoration: none;
+                    color: black;
+                }
+            }
+        }
+    }
+}

@@ -1,8 +1,9 @@
 import React from 'react'
+import NavBarContainer from './components/header/NavBarContainer'
 
 function Header() {
   return (
-    <div>Header</div>
+    <NavBarContainer/>
   )
 }
 

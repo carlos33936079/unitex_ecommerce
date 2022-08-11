@@ -6,9 +6,11 @@ import 'react-toastify/dist/ReactToastify.css';
 import { BrowserRouter } from "react-router-dom";
 
 function App() {
+  
+
   return (
     <BrowserRouter>
-      <Header />
+      <Header/>
       <Main/>
       <Footer/>
       <ToastContainer />
