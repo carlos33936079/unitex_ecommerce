@@ -13,5 +13,12 @@ export const homeSlideData = [
         url: "",
 
     },
+    {
+        id: 3,
+        name: 'img2',
+        path: './images/slideShow/PROPUESTA 2a.jpg',
+        url: "",
+
+    },
     
 ]

@@ -12,11 +12,19 @@
         align-items: center1;
         .homeHeader_login{
             display: flex;
-            justify-content: space-between;
-            padding: 20px 40% 0% 40%;
+            flex-direction: row;
+            justify-content: center;
+            margin-top: 20px;
             a{
                 text-decoration: none;
                 color: black;
+                font-size: 0.8rem;
+                margin-right: 10px;
+                font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+                color: #f16200;
+                .navBarLinks_menu_login_icon{
+                    margin-left: 5px;
+                }
             }
         }
         .homeHeader_logo{
@@ -24,19 +32,39 @@
             justify-content: space-between;
             align-items: center;
             .home_browser{
-                display: block;
-                margin-left: 10%;
+                display: block;  
+                width: 30%;
+                height: 40px;
+                margin-left: 5%;
+                border: 1px solid lightgrey;
+                border-radius: 5px 0px 0px 5px;
+                padding-left: 10px;
+            }
+            .navBarLinks_menu_logo_icon{
+                padding: 11px;    
+                border: 1px solid lightgrey;
+                border-radius: 0px 5px 5px 0px;
+                color: rgb(95, 95, 95);
+                cursor: pointer;
             }
             .home_logo{
                 display: flex;
                 justify-content: center;
-                width: 50%;
+                
                 .logo_img{
-                    width: 100%;
+                    width: 40%;
                 }
             }
             .home_cart{
-                margin-right: 10%;
+                width: 25%;
+                height: 40px;
+                margin-right: 5%;
+                border: 1px solid lightgray;
+                border-radius: 5px;
+                text-align: end;
+                padding: 10px;
+                color: rgb(95, 95, 95);
+                text-decoration: none;
             }
 
         }
@@ -54,8 +82,34 @@
                 }
                 .link_category{
                     text-decoration: none;
-                    color: black;
+                    color: #5f5f5f;
+                    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+
                 }
+            }
+        }
+    }
+    .homeMain_container{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        .homeMain_title{
+            color: #9d806b;
+            font-size: 25px;
+            padding: 12px;
+        }
+        .homeMain_products{
+            width: 70%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            .homeMain_products_first{
+                display: grid;
+                grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+                grid-gap: 0.5rem;
+                margin-top: 1rem;
+                padding: 10px;
+                width: 95%;
             }
         }
     }
