@@ -16,7 +16,8 @@ function NavBarContainer() {
 
   return (
     <>
-        {responsive ? <NavBarResponsive/> : scroll? <NavBarMenu/>: null}
+        {/* {responsive ? <NavBarResponsive/> : scroll? <NavBarMenu/>: null} */}
+        
     </>
   )
 }

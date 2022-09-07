@@ -1,45 +1,60 @@
 import React from 'react'
+import { useEffect } from 'react'
+import { useState } from 'react'
 import { Link } from 'react-router-dom'
 
-function CardProductContainer() {
+function CardProductContainer(props) {
+    
+    const [portada, setPortada] = useState([])
+
+    useEffect(()=>{
+        let port= []
+        props.variantes.map((variante) => {
+            return variante.habilitado ? port.push(variante.imagen) : null
+        })
+        setPortada(port)
+    },[props])
+
   return (
+    
     <div className='cardProduct_container'>
+        
         <div className='cardProduct_image'>
             <div className='cardProduct_img'>
-                <img className='cardProduct_img2' src='images/product/Art k7 set vte 14.jpg' alt='imagen'/>
+                <img className='cardProduct_img2' src={portada[1] ? portada[1] : portada[0]} alt='imagen'/>
                 <div className='cardProduct_img_description'>
                     <div className='cardProduct_img_description_text'>
-                        <p>Ancho: 1.5 mts.</p>
-                        <p>Pieza de: 70 mts.</p>
-                        <p>Peso: 350 gr el mt.</p>
-                        <p>Composición: 100% Polyester</p>
+                        <p>Ancho: {props.anchoMetro} mts.</p>
+                        <p>Pieza de: {props.largoMetro} mts.</p>
+                        <p>Peso: {props.pesoGramo} gr el mt.</p>
+                        <p>Composición: {props.composicion}</p>
                     </div>
-                    <Link to="" className='cardProduct_img_description_btn'>Ver+</Link>   
+                    <Link to={`/product/${props.nombre}`} className='cardProduct_img_description_btn'>Ver+</Link>   
                 </div>  
-                <img className='cardProduct_img1' src='images/product/Art l7 set vte 14 naranja fluo.jpg' alt='imagen'/>
-            </div>
-            <modal>
-            </modal>
+                <Link to={`/product/${props.id}`} className='cardProduct_img_description_btn'><img className='cardProduct_img1' src={portada[0]} alt='imagen'/></Link>
+            </div> 
         </div>
         <div className='cardProduct_description'>
-            <Link className='cardProduct_description_title' to="">TITULO TELA - 01 VARIANTE SARASA</Link>
+            <Link className='cardProduct_description_title' to="">{props.nombre.toUpperCase()}</Link>
             <div className='cardProduct_description_desc'>
                 <div className='cardProduct_description_desc_text'>
                     <p>Por menor</p>
-                    <p2>$329,00</p2>
+                    <p className='card_price'>${props.precio},00</p>
+                    
                 </div>
                 <div className='cardProduct_description_desc_text'>
                     <p>Por mayor</p>
-                    <p2>312,00</p2>
+                    <p className='card_price'>${Math.trunc(props.precio/1.05)},00</p>
                 </div>
                 <div className='cardProduct_description_desc_text'>
                     <p>Por pieza</p>
-                    <p2>$296,00</p2>
+                    <p className='card_price'>${Math.trunc(props.precio/1.10)},00</p>
                 </div>
             </div>
             <Link className='cardProduct_description_btn' to="">AGREGAR</Link>
         </div>
     </div>
+    
   )
 }
 

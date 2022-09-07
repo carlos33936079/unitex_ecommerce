@@ -11,62 +11,66 @@
     transition: all .5s;
     background-color: white;
     &:hover{
-        background-color: lightgrey;
+        background-color: hsl(0, 0%, 91%);
     }
-    .cardProduct_image{
-        width: 95%;
-        height: 53.5%;
-        z-index: 10;
-        .cardProduct_img {
-            position: relative;
-            width: 100%;
-            float: left;
-            margin-top: 5%;
-            .cardProduct_img_description{
-                display: flex;
-                flex-direction: column;
-                align-items: center;
-                background-color: rgba(0, 0, 0, 0.452);
-                height: 236px;
-                @media (max-width: 800px){
-                    height: 200px;
-                }
-                .cardProduct_img_description_text{
-                    margin-top: 3%;
-                    margin-left: 3%;
-                    
-                    p{
+    
+        .cardProduct_image{
+            width: 95%;
+            height: 53.5%;
+            z-index: 10;
+            .cardProduct_img {
+                position: relative;
+                width: 100%;
+                float: left;
+                margin-top: 5%;
+                .cardProduct_img_description{
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    background-color: rgba(0, 0, 0, 0.452);
+                    height: 236px;
+                    @media (max-width: 800px){
+                        height: 200px;
+                    }
+                    .cardProduct_img_description_text{
+                        margin-top: 3%;
+                        margin-left: 3%;
+                        
+                        p{
+                            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+                            font-weight: bold;
+                            font-size: 12px;
+                            line-height: 25px;
+                            color: #FFFFFF;;
+                        }
+                    }
+                    .cardProduct_img_description_btn{
+                        width: 25%;
+                        height: 25%;
+                        position: relative;
+                        margin-top: 90%;
+                        text-decoration: none;
+                        background-color: white;
+                        text-align: center;
                         font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-                        font-weight: bold;
-                        font-size: 12px;
-                        line-height: 25px;
-                        color: #FFFFFF;;
+                        color: black;
+                        cursor: pointer;
                     }
                 }
-                .cardProduct_img_description_btn{
-                    width: 25%;
-                    height: 25%;
-                    position: relative;
-                    margin-top: 90%;
-                    text-decoration: none;
-                    background-color: white;
-                    text-align: center;
-                    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-                    color: black;
-                }
             }
-          }
-          .cardProduct_img img,div {
-            width: 100%;
-            position: absolute;
-            left: 0;
-            transition: opacity 1s ease-in-out;
-          }
-          .cardProduct_img img.cardProduct_img1:hover {
-            opacity: 0;
-          }
-       
-    }
+            .cardProduct_img img,div {
+                width: 100%;
+                position: absolute;
+                left: 0;
+                transition: opacity 1s ease-in-out;
+            }
+            .cardProduct_img img.cardProduct_img1:hover {
+                opacity: 0;
+               
+            }
+        
+        }
+
     .cardProduct_description{
         display: flex;
         flex-direction: column;
@@ -94,7 +98,7 @@
                 color: #2a2b2e;
                 font-size: 11px;
                 }
-                p2{
+                .card_price{
                     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
                     color: #2a2b2e;
                     font-weight: bold;
