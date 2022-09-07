@@ -21,8 +21,7 @@ function HomeContainer() {
 
   return (
     <div className='homeContainer_container'>
-        {/* <HomeHeader data={menuData}/> */}
-        {responsive ? <HomeHeaderMobile data={menuData} clase={scroll ? "homeHeaderMobile_menu_fixed" : "homeHeaderMobile_menu"}/> : <HomeHeader data={menuData} clase={scroll ? "homeHeader_menu_fixed" : "homeHeader_menu"}/>}
+        {responsive ? <HomeHeaderMobile claseSubMenu="" data={menuData} clase={scroll ? "homeHeaderMobile_menu_fixed" : "homeHeaderMobile_menu"}/> : <HomeHeader claseSubMenu="" data={menuData} clase={scroll ? "homeHeader_menu_fixed" : "homeHeader_menu"}/>}
         <SlideShow data={homeSlideData}/>
         <HomeMain/>
     </div>

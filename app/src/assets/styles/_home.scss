@@ -4,11 +4,12 @@
     justify-content: space-around;
     text-decoration: none;
     padding-bottom: 20px;
-
+    transition: all 0.5s;
     .navBarLink_li{
         list-style: none;
         .navBarLinks_menu_view_icon{
             margin-right: 5px;
+            color: $propiedad 
         }
         .link_category{
             text-decoration: none;
@@ -20,12 +21,23 @@
     
 }
 
-@mixin menuResponsivo {
+@mixin menuResponsivo ($carrito) {
+            display: flex;
+            flex-direction: column;
             width: 100%;
             z-index: 100;
-            .homeHeaderMobile_subMenu{
+
+          
+            .homeHeaderMobile_subMenu_of{
+                display: none;
+                transition: all 0.5s;
+            }
+            .homeHeaderMobile_subMenu_on{
+                display: block;
                 width: 100%;
                 background-color: #3f3f3f;
+                transition: all 0.5s;
+
                 .navBarLink_li{
                     list-style: none;
                     padding: 8px 20px;
@@ -33,6 +45,7 @@
 
                     .navBarLinks_menu_view_icon{
                         margin-right: 5px;
+                        color: #ffffff;
                      }
                     .link_category{
                         text-decoration: none;
@@ -41,32 +54,46 @@
                      }
                 }
             }
-            button{
-                width: 100%;
-                height: 40px;
-                background-color: #5f5f5f;
-                border: none;
+            .homeHeaderMobile_menu_btn_1{
                 display: flex;
-                align-items: center;
-                justify-content: space-between;
-                font-size: 21px;
-                font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-                color: #888888;
-                cursor: pointer;
+                flex-direction: row;
+                box-shadow: 0px 2px 6px rgba(128, 128, 128, 0.377);
+                .homeHeaderMobile_menu_btn{
+                    width: 100%;
+                    height: 40px;
+                    background-color: #5f5f5f;
+                    border: none;
+                    display: flex;
+                    align-items: center;
+                    justify-content: space-between;
+                    font-size: 21px;
+                    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+                    color: #888888;
+                    cursor: pointer;
 
-                .navBarLinks_menu_icon{
-                    width: 20px;
-                    height: 20px;
-                    margin-left: 5px;
+                    .navBarLinks_menu_icon{
+                        width: 20px;
+                        height: 20px;
+                        margin-left: 5px;
+                    }
+                  
+                }
+                .homeHeaderMobile_menu_carrito{
+                    display: $carrito;
+                    width: 100%;
+                    background-color: white;
+                    text-align: end;
+                    padding: 10px;  
+                    a{
+                        color: rgb(95, 95, 95);
+                        text-decoration: none;
+                    }
                 }
             }
 }
 
 .homeContainer_container{
-    // display: flex;
-    // flex-direction: column;
-    // justify-content: center;
-    // align-items: center;
+   
     .homeHeader_container{
         display: flex;
         flex-direction: column;
@@ -91,7 +118,7 @@
         }
         .homeHeader_logo{
             display: flex;
-            justify-content: space-between;
+            justify-items: space-between;
             align-items: center;
             .home_browser{
                 display: block;  
@@ -112,9 +139,9 @@
             .home_logo{
                 display: flex;
                 justify-content: center;
-                
+                margin-right: 5%;
                 .logo_img{
-                    width: 40%;
+                    width: 50%;
                 }
             }
             .home_cart{
@@ -131,7 +158,7 @@
 
         }
         .homeHeader_menu{
-            @include menu( #5f5f5f)
+            @include menu( #3f3f3f)
         }
         .homeHeader_menu_fixed{
             position: fixed;
@@ -202,15 +229,17 @@
                 color: rgb(95, 95, 95);
                 text-decoration: none;
             }
-
         }
+
         .homeHeaderMobile_menu{
-            @include menuResponsivo()
+            @include menuResponsivo(none)
+           
         }
         .homeHeaderMobile_menu_fixed{
             position: fixed;
             top: 0;
-            @include menuResponsivo()
+          
+            @include menuResponsivo(block)
         }
         
     }
