@@ -1,5 +1,5 @@
 import React from 'react'
-import CardProductContainer from "../productCard/CardProductContainer"
+import CardProductContainer from "./CardProductContainer"
 
 function Exclusive({productos, loading}) {
     console.log(productos)

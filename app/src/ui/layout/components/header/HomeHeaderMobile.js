@@ -21,7 +21,7 @@ function HomeHeaderMobile({data, clase}) {
             <Link to="">Acceder<FontAwesomeIcon className="navBarLinks_menu_login_icon" icon={faUser}/></Link>
         </div>
         <div className='homeHeaderMobile_logo'>
-            <Link className='home_logo' to="/"><img className='logo_img' src='images/logo/unitex-logo-1700x425.jpg' alt='imagen'/></Link>
+            <Link className='home_logo' to="/"><img className='logo_img' src='/images/logo/unitex-logo-1700x425.jpg' alt='imagen'/></Link>
         </div>
         <div className='homeHeaderMobile_logo'>
             <input className='home_browser' placeholder='Buscar en nuestra tienda...'/><FontAwesomeIcon className="navBarLinks_menu_logo_icon" icon={faMagnifyingGlass}/>

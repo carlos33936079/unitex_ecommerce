@@ -1,12 +1,10 @@
 import React from 'react'
+import Item from './Item'
 
 function ItemDetailContainer() {
   return (
-    <div>
-        <div></div>
-        <div>
-            
-        </div>
+    <div className='itemDetailContainer'>
+        <Item/>
     </div>
   )
 }

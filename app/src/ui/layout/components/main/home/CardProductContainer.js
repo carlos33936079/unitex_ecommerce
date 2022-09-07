@@ -8,7 +8,7 @@ function CardProductContainer(props) {
     const [portada, setPortada] = useState([])
 
     useEffect(()=>{
-        let port= []
+        let port= [] 
         props.variantes.map((variante) => {
             return variante.habilitado ? port.push(variante.imagen) : null
         })

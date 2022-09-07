@@ -12,8 +12,7 @@
     background-color: white;
     &:hover{
         background-color: hsl(0, 0%, 91%);
-    }
-    
+    } 
         .cardProduct_image{
             width: 95%;
             height: 53.5%;
@@ -29,9 +28,9 @@
                     align-items: center;
                     background-color: rgba(0, 0, 0, 0.452);
                     height: 236px;
-                    @media (max-width: 800px){
-                        height: 200px;
-                    }
+                    // @media (max-width: 800px){
+                    //     height: 200px;
+                    // }
                     .cardProduct_img_description_text{
                         margin-top: 3%;
                         margin-left: 3%;

@@ -1,0 +1,51 @@
+
+.itemDetailContainer{
+    border: 1px solid red;
+    display: flex;
+    justify-content: center;
+    .itemContainer{
+        margin-top: 30px;
+        width: 70%;
+        border: 1px solid blue;
+        .item_nav{
+            display: flex;
+            justify-content: center;
+            border: 1px solid red;
+            div{
+                margin-left: 5px;
+                color: #3f3f3f;
+                font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+                font-size: 12px;
+                a{
+                    text-decoration: none;
+                    color: #3f3f3f;
+                }
+            }
+
+        }
+        .item_description{
+            display: flex;
+            height: auto;
+            border: 1px solid red;
+            justify-content: space-between;
+            .item_description_img_container{
+                display: flex;
+                flex-direction: column;
+                width: 50%;
+                border: 1px solid red;
+
+                .item_description_img{
+                    img{
+                        width: 100%;
+                    }
+                }
+            }
+            .item_description_desc_container{
+                padding: 10px;
+                border: 1px solid red;
+                width: 50%;
+            }
+        }
+    }
+
+}
