@@ -8,7 +8,7 @@ function Main() {
   return (
     <Routes>
       <Route path="/" element={<HomeContainer/>} />
-      <Route path="/product/:id" element={<ItemDetailContainer/>} />
+      <Route path="/product/:id/:name" element={<ItemDetailContainer/>} />
     </Routes>
   )
 }

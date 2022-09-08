@@ -6,13 +6,16 @@ import { Link } from 'react-router-dom'
 function CardProductContainer(props) {
     
     const [portada, setPortada] = useState([])
+    const [variante, setVariante] = useState([])
 
     useEffect(()=>{
         let port= [] 
+        let art= []
         props.variantes.map((variante) => {
-            return variante.habilitado ? port.push(variante.imagen) : null
+            return variante.habilitado ? (port.push(variante.imagen[0]), art.push(variante.vte)) : null
         })
         setPortada(port)
+        setVariante(art)
     },[props])
 
   return (
@@ -31,7 +34,7 @@ function CardProductContainer(props) {
                     </div>
                     <Link to={`/product/${props.nombre}`} className='cardProduct_img_description_btn'>Ver+</Link>   
                 </div>  
-                <Link to={`/product/${props.id}`} className='cardProduct_img_description_btn'><img className='cardProduct_img1' src={portada[0]} alt='imagen'/></Link>
+                <Link to={`/product/${props.id}/${props.nombre}`} className='cardProduct_img_description_btn'><img className='cardProduct_img1' src={portada[0]} alt='imagen'/></Link>
             </div> 
         </div>
         <div className='cardProduct_description'>
