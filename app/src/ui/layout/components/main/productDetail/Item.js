@@ -1,6 +1,7 @@
 import React from 'react'
 import { useState } from 'react'
 import { Link } from 'react-router-dom'
+import Galery from './Galery'
 
 function Item({producto, variante}) {
     // console.log("variante",variante)
@@ -12,8 +13,8 @@ function Item({producto, variante}) {
 
     console.log("foto", selectFoto)
 
-    const handleClick = (key,value) => {
-        console.log("muestra",value)
+    const onAdd = (i) => {
+        setSelectFoto(i)
     }
 
   return (
@@ -28,12 +29,54 @@ function Item({producto, variante}) {
                 <div className='item_description_galeria'>
                     
                     {varianteActual.imagen.map((imagen, i)=>{
-                    return <div key={i} className='item_description_galeria_images' onClick={handleClick}><img src={imagen} alt="imgen" /></div>
+                    return <Galery key={i} imagen={imagen} i={i} onAdd={onAdd}/>
                     })}
                 </div>
             </div>
             <div className='item_description_desc_container'>
-                <div>descripcion</div>
+                <div className='item_description_product'>
+                    <div className='item_description_product_title'>
+                        <h2>{`${producto.nombre} - ${varianteActual.vte} ${varianteActual.color}`.toUpperCase()}</h2>
+                        <h3>{`${producto.anchoMetro} mts de ancho - art. ${producto.id}`.toUpperCase()}</h3>
+                    </div>
+                    <div className='item_description_product_price'>
+                        <div className='item_description_product_price_'>
+                            <div className='item_description_product_price_01'>
+                                <div>
+                                    <h3>POR MENOR</h3>
+                                    <h4>a partir de 1 metro/unidad</h4>
+                                </div>
+                                <h3>${producto.precio}</h3>
+                            </div>
+                            <span></span>
+                        </div>
+                        <div className='item_description_product_price_'>
+                            <div className='item_description_product_price_01'>
+                                <div>
+                                    <h3>POR MAYOR</h3>
+                                    <h4>a partir de 10 metro/unidad</h4>
+                                </div>
+                                <h3>${Math.trunc(producto.precio/1.05)}</h3>
+                            </div>
+                            <span></span>
+                        </div>
+                        <div className='item_description_product_price_'>
+                            <div className='item_description_product_price_01'>
+                                <div>
+                                    <h3>POR PIEZA</h3>
+                                    <h4>pieza cerrada de {producto.largoMetro} metros</h4>
+                                </div>
+                                <h3>${Math.trunc(producto.precio/1.10)}</h3>
+                            </div>
+                            <span></span>
+                        </div>
+                    </div>
+                    <div className='item_description_product_tags'>
+                        <h3>usos</h3>
+                        <h4>tags</h4>
+                    </div>
+                    
+                </div>
                 <div>contador</div>
             </div>
         </div>

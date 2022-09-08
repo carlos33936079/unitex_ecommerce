@@ -1,21 +1,25 @@
 
 .itemDetailContainer{
-    border: 1px solid red;
     display: flex;
     justify-content: center;
     .itemContainer{
         margin-top: 30px;
-        width: 70%;
-        border: 1px solid blue;
+        width: 75%;
+        @media screen and (max-width: 600px){
+            width: 90%;
+        }
         .item_nav{
             display: flex;
             justify-content: center;
-            border: 1px solid red;
             div{
                 margin-left: 5px;
                 color: #3f3f3f;
                 font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
                 font-size: 12px;
+                margin-bottom: 15px;
+                @media screen and (max-width: 600px){
+                    font-size: 3vw;
+                }
                 a{
                     text-decoration: none;
                     color: #3f3f3f;
@@ -27,11 +31,19 @@
             display: flex;
             height: auto;
             justify-content: space-between;
+            padding: 20px;
+            @media screen and (max-width: 600px){
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+            }
             .item_description_img_container{
                 display: flex;
                 flex-direction: column;
                 width: 50%;
-
+                @media screen and (max-width: 600px){
+                    width: 70%;
+                }
                 .item_description_img{
                     a{
                         img{
@@ -46,6 +58,7 @@
                         width: 30%;
                         margin-top: 20px;
                         margin-right: 20px;
+                        cursor: pointer;
                         img{
                             width: 100%;
                         }
@@ -53,8 +66,72 @@
                 }
             }
             .item_description_desc_container{
-                padding: 10px;
+                padding-left: 20px;
                 width: 50%;
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+                .item_description_product{
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: space-between;
+                    height: 74.5%;
+
+                    .item_description_product_title{
+                        display: flex;
+                        flex-direction: column;
+                        width: 100%;
+                        h2{
+                            font-size: 2vw;
+                            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+                            font-weight: 100;
+                            color:#3f3f3f;
+                        }
+                        h3{
+                            line-height: 2;
+                            font-size: 1vw;
+                            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+                            font-weight: 100;
+                            color:#3f3f3f;
+                        }
+                    }
+                    .item_description_product_price{
+                        display: flex;
+                        flex-direction: column;
+                        justify-content: space-around;
+                        height: 70%;
+                        .item_description_product_price_{
+                            display: flex;
+                            flex-direction: column;
+                            .item_description_product_price_01{
+                                display: flex;
+                                align-items: center;
+                                justify-content: space-between;
+                                div{
+                                    h3{
+                                        line-height: 2;
+                                        font-size: 1.2vw;
+                                        font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+                                        font-weight: 300;
+                                        color:#3f3f3f;
+                                    }
+                                    h4{
+                                        line-height: 2;
+                                        font-size: 0.9vw;
+                                        font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+                                        font-weight: 100;
+                                        color:#3f3f3f;
+                                    }
+                                }
+                            }
+                            span{
+                                border-top: 1px solid #3f3f3f;
+                                margin-top: 30px;
+                            }
+
+                        }
+                    }
+                }
             }
         }
     }
